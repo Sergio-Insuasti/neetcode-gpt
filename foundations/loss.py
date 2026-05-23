@@ -18,6 +18,7 @@ class Solution:
         # y_true: one-hot encoded true labels (shape: n_samples x n_classes)
         # y_pred: predicted probabilities (shape: n_samples x n_classes)
         # Hint: add a small epsilon (1e-7) to y_pred to avoid log(0)
+        # Sum over classes FIRST -> axis = 1
         # return round(your_answer, 4)
         epsilon = 1e-7
         y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
