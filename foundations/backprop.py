@@ -13,6 +13,7 @@ class Solution:
         # Forward: z = dot(x, w) + b, y_hat = sigmoid(z)
         # Loss: L = 0.5 * (y_hat - y_true)^2
         # Return: (dL_dw rounded to 5 decimals, dL_db rounded to 5 decimals)
+        
         #linear 
         z = np.dot(x, w.T) + b
 
