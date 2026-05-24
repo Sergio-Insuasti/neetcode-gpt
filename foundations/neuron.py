@@ -16,10 +16,9 @@ class Solution:
         z = np.dot(x, w)
         z = z + b
         if activation == "sigmoid":
-            result = 1.0 / (1.0 + np.exp(-z))
+            return np.round(float(1.0 / (1.0 + np.exp(-z))), 5)
         elif activation == "relu":
-            result = max(0.0, z)
+            return np.round(float(np.maximum(0.0, z)), 5)
         else:
-            result = z
-        return np.round(float(result), 5)
+            return z
 
